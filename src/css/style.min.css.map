@@ -1,0 +1,10 @@
+{
+    "version": 3,
+    "mappings": "AAEA,AAAA,CAAC,AAAA,CACG,WAAW,CAAE,6BAA6B,CAC7C",
+    "sources": [
+        "../sass/style.scss",
+        "../sass/base/_vareables.scss"
+    ],
+    "names": [],
+    "file": "style.min.css"
+}
