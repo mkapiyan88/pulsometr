@@ -91,7 +91,15 @@
    }
    	.consultation {
 	   h2 {
-		   font-size: 35px;
+		   font-size: 30px;
+	   }
+	   .consultation__descr {
+		   width: 300px;
+		   font-size: 19px;
+		   text-align: center;
+	   }
+	   form {
+		   margin-top: 25px;
 	   }
    }
 }
@@ -115,22 +123,24 @@
 				margin-top: 20px;
 			}
 			&__phone {
-				font-size: 16px;
+				font-size: 15px;
 			}
 			.button {
+				margin-top: 10px;
 				width: 150px;
 				height: 35px;
-				font-size: 12px;
+				font-size: 10px;
 			}
 
 		}
 		&__header {
-			font-size: 33px;
+			font-size: 30px;
 			text-align: center;
 		}
 		&__subheader {
 			margin-top: 0px;
-			font-size: 18px;
+			width: 280px;
+			font-size: 15px;
 			text-align: center;
 		}
 		&__icons {
@@ -142,11 +152,12 @@
 			margin-bottom: 50px;
 		}
 		.button_main {
-			width: 220px;
-			font-size: 15px;
+			width: 160px;
+			height: 40px;
+			font-size: 11px;
 		}
 		&__link {
-			font-size: 15px;
+			font-size: 12px;
 		}
 	}
 	.advantages {
@@ -182,12 +193,26 @@
 		h2 {
 			margin: 0;
 			text-align: center;
-			font-size: 30px;
+			font-size: 25px;
 		}
 		.feed-form {
 			margin: 0 auto;
 			margin-top: 30px;
-			width: 260px;
+			width: 250px;
+			input {
+				font-size: 12px;
+			}
+			.button_submit {
+				font-size: 12px;
+			}
+				
+			
+		}
+		.consultation__descr {
+			margin: 0 auto;
+			margin-top: 30px;
+			text-align: center;
+			font-size: 13px;
 		}
 	}
 }
