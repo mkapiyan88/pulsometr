@@ -91,6 +91,45 @@ $(document).ready(function(){
     valideForms('#order form');
 
     $('input[name=phone]').mask("+7 (999) 999-99-99");
+
+    $('form').submit(function(e) {
+        e.preventDefault();
+
+        if(!$(this).valid()) {
+            return;
+        }
+
+        // отправка email с сайта
+
+        $.ajax({
+            type: "POST",
+            url: "mailer/smart.php",
+            data: $(this).serialize()
+        }).done(function() {
+            $(this).find("input").val("");
+            $('#consultation, #order').fadeOut();
+            $('.overlay, #thanks').fadeIn('slow');
+
+            $('form').trigger('reset');
+        });
+        return false;
+    });
+
+    //smoof scroll and pageup (Создаем плавный скролинг)
+
+    $(window).scroll(function() {            // $(window) - используется все окно браузера. .scroll -js следит за скролом. (Когда пользователь скролит страницу.) function() - Во вркмя скрола происходит функция.
+        if ($(this).scrollTop() > 1600) {    //  if - если. $(this) - наша страница (Элемент на который ссылаемся выше). .scrollTop() > 1600 - Означает что скролл сверху составил 1600px. Если эио условие выполняется то происходит... 
+            $('.pageup').fadeIn();              // то ссылка ($('.pageup')- это элемент стрелки вверх)) появляется (.fadeIn) 
+        } else {                             // если уловие не выполняется (else) то ...
+            $('.pageup').fadeOut();             // то ссылка ($('.pageup')- это элемент стрелки вверх)) не появляется (.fadeOut)
+        }
+    });
+
+    $("a[href^='#']").click(function(){
+        const _href = $(this).attr("href");
+        $("html, body").animate({scrollTop: $(_href).offset().top+"px"});
+        return false;
+    });
 });
 
 

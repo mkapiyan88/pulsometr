@@ -32,5 +32,28 @@
             text-decoration: underline;
         }
     }
+    // &__icon {
+    //     &_animated {                              // Применяем анимацию к сердечку.
+    //         animation-name: heartbeat;            // animation-name - ууказываем название внимации которое прописывали в файле _animations.scss.
+    //         animation-duration: 1.5s;             // animation-duration - указываем сколько по вемени будет проходить анимация.
+    //         animation-timing-function: ease;      // Свойство animation-timing-function описывает, как будет развиваться анимация между каждой парой ключевых кадров. "ease" - Функция по умолчанию, анимация начинается медленно, разгоняется быстро и замедляется в конце.
+    //         animation-iteration-count: infinite;  // Свойство animation-iteration-count указывает, сколько раз проигрывается цикл анимации. "infinite" - Анимация проигрывается бесконечно.
+    //         &:hover {                             // При наведении на элемент
+    //             animation-play-state: paused;     // Свойство animation-play-state определяет, будет ли анимация запущена или приостановлена. "paused" - Анимация приостанавливается. При перезапуске анимация начинается с того места, где она была остановлена.
+    //         }
+    //     }
+    // }
+
+            // Прописываем множественную анимацию, на подобе как прописываем свойство "bakcground"
+                    // animation-name и animation-duration  самые главные параметры, без них 
+                                //    анимация не будет действовать     
+    &__icon {
+        &_animated {
+            animation: heartbeat 1.5s ease infinite;
+            &:hover {
+                animation-play-state: paused;
+            }
+        }
+    }
 
 }
