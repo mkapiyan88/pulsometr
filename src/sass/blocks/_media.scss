@@ -500,6 +500,11 @@
 	}
 }
 @media (max-width: 375px) {
+	.promo {
+		&__icons {
+			width: 100%;
+		}
+	}
 	section.carousel {
 		padding: 50px 0 10px 0;
 	}
