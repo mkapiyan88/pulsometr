@@ -439,23 +439,33 @@
 	}
 	.overlay{
 		.modal {
-			padding: 25px 40px 25px 40px;
-			max-height: 70%;
+			min-height: 0%;
+			padding: 15px 40px 15px 40px;
+			max-height: 60%;
 			&__subtitle {
-				font-size: 13px;
+				font-size: 11px;
 			}
 			&__descr {
-				font-size: 11px;
+				font-size: 10px;
+			}
+			&__close {
+				right: -30px;
 			}
 		}
 		.feed-form_mt25 {
+			margin-top: 10px;
 			max-height: 275px;
+			input {
+				font-size: 8px;
+				height: 30px;
+			}
 		}
 		.feed-form .button {
-			font-size: 12px;
+			font-size: 10px;
+			height: 30px;
 		}
 		.error {
-			font-size: 11px;
+			font-size: 8px;
 		}
 	}
 
